@@ -1,4 +1,4 @@
-package edu.eazybytes.springSecOAUTH2;
+package edu.eazybytes.social_logins;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
