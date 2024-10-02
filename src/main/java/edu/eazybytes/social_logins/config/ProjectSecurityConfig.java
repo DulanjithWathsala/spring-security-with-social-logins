@@ -28,23 +28,23 @@ public class ProjectSecurityConfig {
         return httpSecurity.build();
     }
 
-    @Bean
-    ClientRegistrationRepository clientRegistrationRepository() {
-        ClientRegistration github = gitHubclientRegistration();
-        ClientRegistration facebook = facebookclientRegistration();
-
-        return new InMemoryClientRegistrationRepository(github, facebook);
-    }
-
-    private ClientRegistration gitHubclientRegistration() {
-        return CommonOAuth2Provider.GITHUB.getBuilder("github")
-                .clientId(environment.getProperty("GITHUB_ID"))
-                .clientSecret(environment.getProperty("GITHUB_SECRET")).build();
-    }
-
-    private ClientRegistration facebookclientRegistration() {
-        return CommonOAuth2Provider.FACEBOOK.getBuilder("facebook")
-                .clientId(environment.getProperty("FACEBOOK_ID"))
-                .clientSecret(environment.getProperty("FACEBOOK_SECRET")).build();
-    }
+//    @Bean
+//    ClientRegistrationRepository clientRegistrationRepository() {
+//        ClientRegistration github = gitHubclientRegistration();
+//        ClientRegistration facebook = facebookclientRegistration();
+//
+//        return new InMemoryClientRegistrationRepository(github, facebook);
+//    }
+//
+//    private ClientRegistration gitHubclientRegistration() {
+//        return CommonOAuth2Provider.GITHUB.getBuilder("github")
+//                .clientId(environment.getProperty("GITHUB_ID"))
+//                .clientSecret(environment.getProperty("GITHUB_SECRET")).build();
+//    }
+//
+//    private ClientRegistration facebookclientRegistration() {
+//        return CommonOAuth2Provider.FACEBOOK.getBuilder("facebook")
+//                .clientId(environment.getProperty("FACEBOOK_ID"))
+//                .clientSecret(environment.getProperty("FACEBOOK_SECRET")).build();
+//    }
 }
